@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Duper Rick and Morty App</title>
+    <script src="js/index.js" type="module" defer></script>
+  </head>
+  <body>
+    <header>
+      <section class="headerContainer">
+        <h1 data-js="heading">Choose your Fighter!</h1>
+      </section>
+    </header>
+    <main>
+      <!-------------------------- HOME ---------------------------->
+      <ul role="list" class="card-list" data-js="cards"></ul>
+      <!-------------------------- FAVORITES ---------------------------->
+      <section class="cards-container hidden" data-js="favoriteCards"></section>
+      <!-------------------------- CREATE ---------------------------->
+      <section class="createPage" data-js="createCards">
+        <form data-js="form">
+          <label for="name-input">Name:</label>
+          <textarea
+            name="name"
+            id="name"
+            cols="30"
+            rows="1"
+            placeholder="Pickle Rick"
+          ></textarea>
+
+          <label for="dead-or-alive">Status:</label>
+          <textarea
+            name="status"
+            id="status"
+            cols="30"
+            rows="1"
+            placeholder="Semi-Dead"
+          ></textarea>
+
+          <label for="species">Species:</label>
+          <textarea
+            name="species"
+            id="species"
+            cols="30"
+            rows="1"
+            placeholder="Cucumber"
+          ></textarea>
+
+          <label for="location">Last known Location:</label>
+          <textarea
+            name="location"
+            id="location"
+            cols="30"
+            rows="1"
+            placeholder="Sewers"
+          ></textarea>
+
+          <input type="file" id="image" class="image-upload" />
+
+          <button class="createCard" type="submit">Join the fight!</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="#" id="homebtn"
+              ><svg
+                class="svg"
+                fill="current-color"
+                width="50"
+                height="50"
+                viewBox="0 0 24 24"
+              >
+                <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" id="bookmarkbtn"
+              ><svg class="svg" width="50px" height="50px" viewBox="0 0 24 24">
+                <path
+                  fill="current-color"
+                  d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" id="createBtn"
+              ><svg class="svg" width="50" height="50" viewBox="0 0 24 24">
+                <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
