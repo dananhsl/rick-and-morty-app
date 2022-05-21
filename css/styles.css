@@ -1,5 +1,7 @@
-@import url(./cardstructure.css);
-@import url(./heading.css);
+@import url(./components/bookmarkbtn.css);
+@import url(./components/cardstructure.css);
+@import url(./components/heading.css);
+@import url(./components/navbar.css);
 
 * {
   box-sizing: border-box;
