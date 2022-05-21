@@ -19,9 +19,7 @@ Promise.all(promises).then((pages) => {
   allCards = allCards.map((card) => {
       return {...card, isBookmarked: false};
   })
-  allCards.forEach((card) => {
-      cardsContainer.append(renderCard(card));
-  })
+  renderHome(allCards);
 })
 
 
@@ -50,10 +48,12 @@ document.querySelector('[data-js="createBtn"]').addEventListener('click', () => 
 
 
 /* ------------------------------------Render homepage cards------------------------------------------------*/
-function renderCard(card) {
+function renderHome(allCards) {
     cardsContainer.innerHTML = ''
+  
+    allCards
       //.filter(card => card.tags.includes(currentFilter) || currentFilter === 'all')
-      
+      .forEach((card) => {
         const cardElement = document.createElement('li')
         cardElement.className = 'card'
         cardElement.innerHTML = `
@@ -71,13 +71,14 @@ function renderCard(card) {
         <label class="locationLabel">${card.location.name}</label>
       </section>
         `
-
+        cardsContainer.append(cardElement)
+  
         const bookmarkElement = cardElement.querySelector('[data-js="bookmark"]')
         bookmarkElement.addEventListener('click', () => {
           card.isBookmarked = !card.isBookmarked
-          console.log(card.isBookmarked);
           bookmarkElement.classList.toggle('card__bookmark--active')
-        })  
+        })
+      })  
   }
 
 
@@ -106,13 +107,6 @@ function renderCard(card) {
       </section>
         `
         favoritesContainer.append(cardElement)
-
-        const bookmarkElement = cardElement.querySelector('[data-js="bookmark"]')
-        bookmarkElement.addEventListener('click', () => {
-            bookmarkedCard.isBookmarked = !bookmarkedCard.isBookmarked;
-            bookmarkElement.classList.toggle('card__bookmark--active')
-            console.log(bookmarkedCard.isBookmarked);
-          })
           
       })  
       
