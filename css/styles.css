@@ -1,0 +1,7 @@
+.card_bookmark--active{
+    color: hotpink;
+}
+
+.hidden{
+    display: none;
+}

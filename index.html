@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css">
     <title>Super Duper Rick and Morty App</title>
     <script src="js/index.js" type="module" defer></script>
   </head>
@@ -15,11 +16,11 @@
     </header>
     <main>
       <!-------------------------- HOME ---------------------------->
-      <ul role="list" class="card-list" data-js="cards"></ul>
+      <ul role="list" class="card-list" data-js="cards"><li>hello</li></ul>
       <!-------------------------- FAVORITES ---------------------------->
-      <section class="cards-container hidden" data-js="favoriteCards"></section>
+      <section class="cards-container hidden" data-js="favoriteCards"><p>Hello</p></section>
       <!-------------------------- CREATE ---------------------------->
-      <section class="createPage" data-js="createCards">
+      <section class="createPage hidden" data-js="createCards">
         <form data-js="form">
           <label for="name-input">Name:</label>
           <textarea
@@ -67,7 +68,7 @@
       <nav class="nav">
         <ul>
           <li>
-            <a href="#" id="homebtn"
+            <a href="#" id="homebtn" data-js="homebtn"
               ><svg
                 class="svg"
                 fill="current-color"
@@ -80,7 +81,7 @@
             </a>
           </li>
           <li>
-            <a href="#" id="bookmarkbtn"
+            <a href="#" id="bookmarkbtn" data-js="bookmarkbtn"
               ><svg class="svg" width="50px" height="50px" viewBox="0 0 24 24">
                 <path
                   fill="current-color"
@@ -90,7 +91,7 @@
             </a>
           </li>
           <li>
-            <a href="#" id="createBtn"
+            <a href="#" id="createBtn" data-js="createBtn"
               ><svg class="svg" width="50" height="50" viewBox="0 0 24 24">
                 <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
               </svg>
