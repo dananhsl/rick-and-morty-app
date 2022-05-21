@@ -20,7 +20,7 @@ form.addEventListener('submit', (event) => {
   const statusElement = form.elements.status
   const speciesElement = form.elements.species
   const locationElement = form.elements.location
-  const imageElement = form.elements.image
+  const imageElement = url.createObjectURL(form.elements.image[0])
 
   const newCard = {
     name: fighterNameElement.value,
@@ -47,7 +47,7 @@ function renderCards(allCards) {
       cardElement.className = 'card'
       cardElement.innerHTML = `
       <section class="characterCard" data-js="epicFighterCard">
-      <img src="${card.image}" />
+      <img class="card__image"src="${card.image}" />
   
       <button class="bookmarkBtn" data-js="bookmark">Click me</button>
   
