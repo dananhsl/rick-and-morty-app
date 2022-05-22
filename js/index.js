@@ -164,6 +164,7 @@ function renderFavorites(bookmarkedCards) {
             return allCard
           }
         })
+        cardElement.remove();
       })
     })
 }

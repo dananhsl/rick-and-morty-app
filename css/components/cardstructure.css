@@ -2,7 +2,11 @@ body {
   background: linear-gradient(90deg, #0a0c0a, var(--darkgray), #0a0c0a);
 }
 
+.cards-container {
+  height: 100vh;
+}
 .characterCard {
+  cursor: pointer;
   display: flex;
   align-items: left;
   align-content: left;
@@ -38,4 +42,20 @@ body {
 
 .speciesLabel {
   margin-left: 4px;
+}
+
+.characterCard:hover {
+  animation: glowy 1s ease-in-out infinite alternate;
+}
+
+@keyframes glowy {
+  from {
+    box-shadow: 0 0 7px var(--lightgreen), 0 0 10px var(--picklegreen),
+      0 0 21px var(--lightgreen);
+  }
+  to {
+    box-shadow: 0 0 10px var(--lightgreen), 0 0 20px var(--lightgreen),
+      0 0 30px var(--picklegreen), 0 0 40px var(--picklegreen),
+      0 0 10px var(--picklegreen);
+  }
 }

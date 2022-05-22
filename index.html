@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Super Duper Rick and Morty App</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,9 +24,11 @@
     </header>
     <main>
       <!-------------------------- HOME ---------------------------->
-      <ul role="list" class="card-list" data-js="cards"><li>hello</li></ul>
+      <ul role="list" class="card-list" data-js="cards">
+        <li>hello</li>
+      </ul>
       <!-------------------------- FAVORITES ---------------------------->
-      <section class="cards-container hidden" data-js="favoriteCards"><p>Hello</p></section>
+      <section class="cards-container hidden" data-js="favoriteCards"></section>
       <!-------------------------- CREATE ---------------------------->
       <section class="createPage hidden" data-js="createCards">
         <form action="" data-js="form" method="post">
@@ -38,7 +40,6 @@
             rows="1"
             placeholder="Pickle Rick"
             required></textarea>
-
           <label for="dead-or-alive">Status:</label>
             <select name="status" id="status" required>
               <option value="Dead">Dead</option>
@@ -46,18 +47,7 @@
               <option value="Soon to be Dead">Soon to be Dead</option>
               <option value="Something in between">Something in between</option>
             </select>
-
-          <!--- Alternative
-            <textarea
-            name="status"
-            id="status"
-            cols="30"
-            rows="1"
-            placeholder="Semi-Dead"
-          ></textarea>
-          --->
-
-          <label for="species">Species:</label>
+          <label class="form__label" for="species">Species:</label>
           <textarea
             name="species"
             id="species"
@@ -66,7 +56,7 @@
             placeholder="Cucumber"
             required></textarea>
 
-          <label for="location">Last known Location:</label>
+          <label class="form__label" for="location">Last known Location:</label>
           <textarea
             name="location"
             id="location"
