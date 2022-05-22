@@ -1,7 +1,24 @@
-.card__bookmark--active{
-    color: hotpink;
+@import url(./components/bookmarkbtn.css);
+@import url(./components/cardstructure.css);
+@import url(./components/heading.css);
+@import url(./components/navbar.css);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --darkgray: #3d373c;
+  --darkblue: #477385;
+  --creme: #e7e0db;
+  --picklegreen: #2f9331;
+  --lightgreen: #8bcf21;
+  --lightblue: #83d2e4;
 }
 
 .hidden{
     display: none;
 }
+

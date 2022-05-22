@@ -1,0 +1,26 @@
+h1 {
+  font-family: Creepster;
+  font-size: 4em;
+  text-align: center;
+  border-radius: 2px;
+  color: var(--lightblue);
+  position: absolute;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+h2 {
+  font-family: Creepster;
+  font-size: 4.1em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: -1;
+  text-shadow: 0 0 7px var(--lightgreen), 0 0 10px var(--picklegreen),
+    0 0 21px var(--lightgreen);
+}

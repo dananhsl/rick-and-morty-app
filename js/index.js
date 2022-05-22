@@ -21,7 +21,7 @@ form.addEventListener('submit', (event) => {
   const statusElement = form.elements.status
   const speciesElement = form.elements.species
   const locationElement = form.elements.location
-  const imageElement = form.elements.image
+  const imageElement = url.createObjectURL(form.elements.image[0])
 
   const newCard = {
     name: fighterNameElement.value,
@@ -74,17 +74,18 @@ function renderHome(allCards) {
       cardElement.className = 'card'
       cardElement.innerHTML = `
       <section class="characterCard" data-js="epicFighterCard">
-      <img src="${card.image}" />
+      <img class="card__image"src="${card.image}" />
   
-      <button class="bookmarkBtn" data-js="bookmark">Click me</button>
-  
-      <label class="nameLabel">${card.name}</label>
-  
-      <label class="statusLabel">${card.status}</label>
+      <button class="card__bookmark" data-js="bookmark"></button>
+      <div class="card__text">
+      <label class="nameLabel">Name: ${card.name}</label>
+      <div class="card__flex"
+      <label class="statusLabel"> ${card.status} &#183; </label>
   
       <label class="speciesLabel">${card.species}</label>
-  
-      <label class="locationLabel">${card.location.name}</label>
+      </div>
+      <label class="locationLabel">Last seen Location: ${card.location.name}</label>
+      </div>
     </section>
       `
       cardsContainer.append(cardElement)

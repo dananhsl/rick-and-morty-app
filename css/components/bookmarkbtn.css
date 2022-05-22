@@ -1,0 +1,47 @@
+.card__bookmark {
+  all: unset;
+  cursor: pointer;
+  position: relative;
+  right: -16em;
+  top: -5px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0.9em;
+  margin-right: 0.9em;
+  margin-bottom: 1.2em;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0.7em solid var(--darkblue);
+  border-left: 0.3em solid transparent;
+  font-size: 24px;
+}
+.card__bookmark:before,
+.card__bookmark:after {
+  content: '';
+
+  display: block;
+  width: 0;
+  height: 0;
+
+  position: absolute;
+  top: 0.6em;
+  left: -1em;
+
+  border-right: 1em solid transparent;
+  border-bottom: 0.7em solid var(--darkblue);
+  border-left: 1em solid transparent;
+
+  transform: rotate(-35deg);
+}
+
+.card__bookmark:after {
+  transform: rotate(35deg);
+}
+
+.card__bookmark--active {
+  border-bottom: 0.7em solid yellow;
+}
+.card__bookmark--active:before,
+.card__bookmark--active:after {
+  border-bottom: 0.7em solid yellow;
+}

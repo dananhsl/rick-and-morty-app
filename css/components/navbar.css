@@ -1,0 +1,29 @@
+footer {
+  position: sticky;
+  display: flex;
+  width: 100vw;
+  bottom: 0;
+  background: #0a0c0a;
+  justify-content: center;
+  align-self: center;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  flex-direction: row;
+}
+
+.nav ul li {
+  margin: 0 0.5rem;
+}
+
+.nav ul li a {
+  margin: 4em;
+  align-self: center;
+}
+
+.svg {
+  fill: var(--creme);
+}
