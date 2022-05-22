@@ -2,6 +2,7 @@
 //import 'fetchData.js'
 const cardsContainer = document.querySelector('[data-js="cards"]') //section, die die cards beinhaltet
 const form = document.querySelector('[data-js="form"]')
+const imageInput = document.querySelector('[data-js="img"]')
 const favoritesContainer = document.querySelector('[data-js="favoriteCards"]') //Formular
 /*const filterForm = document.querySelector('[data-js=filter-form]')
  ^ WE NEED TO WORK ON THIS */
@@ -38,18 +39,20 @@ form.addEventListener('submit', (event) => {
   const statusElement = form.elements.status
   const speciesElement = form.elements.species
   const locationElement = form.elements.location
-  const imageElement = url.createObjectURL(form.elements.image[0])
+  console.log(locationElement)
+  const imageElement = URL.createObjectURL(imageInput.files[0]);
 
   const newCard = {
     name: fighterNameElement.value,
     status: statusElement.value,
     species: speciesElement.value,
-    location: locationElement.value,
-    image: imageElement.value,
+    location: {name: locationElement.value},
+    image: imageElement,
     isBookmarked: false,
   }
 
   allCards = [newCard, ...allCards] //leere Liste wird mit neuen Objekten und vorhandenen Objekten befüllt
+  console.log(allCards)
   form.reset()
   fighterNameElement.focus()
   renderCards(allCards)

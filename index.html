@@ -31,25 +31,22 @@
       <section class="cards-container hidden" data-js="favoriteCards"></section>
       <!-------------------------- CREATE ---------------------------->
       <section class="createPage hidden" data-js="createCards">
-        <form data-js="form">
-          <label class="form__label" for="name-input">Name:</label>
+        <form action="" data-js="form" method="post">
+          <label for="name-input">Name:</label>
           <textarea
             name="name"
             id="name"
             cols="30"
             rows="1"
             placeholder="Pickle Rick"
-          ></textarea>
-
-          <label class="form__label" for="dead-or-alive">Status:</label>
-          <textarea
-            name="status"
-            id="status"
-            cols="30"
-            rows="1"
-            placeholder="Semi-Dead"
-          ></textarea>
-
+            required></textarea>
+          <label for="dead-or-alive">Status:</label>
+            <select name="status" id="status" required>
+              <option value="Dead">Dead</option>
+              <option value="Alive">Alive</option>
+              <option value="Soon to be Dead">Soon to be Dead</option>
+              <option value="Something in between">Something in between</option>
+            </select>
           <label class="form__label" for="species">Species:</label>
           <textarea
             name="species"
@@ -57,7 +54,7 @@
             cols="30"
             rows="1"
             placeholder="Cucumber"
-          ></textarea>
+            required></textarea>
 
           <label class="form__label" for="location">Last known Location:</label>
           <textarea
@@ -66,11 +63,11 @@
             cols="30"
             rows="1"
             placeholder="Sewers"
-          ></textarea>
+            required></textarea>
 
-          <input type="file" id="image" class="image-upload" />
+          <input type="file" data-js="img" id="image" class="image-upload" accept="image/*">
 
-          <button class="createCard" type="submit">Join the fight!</button>
+          <input class="createCard" type="submit">Join the fight!</input>
         </form>
       </section>
     </main>
