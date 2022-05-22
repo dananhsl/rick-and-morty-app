@@ -47,7 +47,7 @@ document.querySelector('[data-js="createBtn"]').addEventListener('click', () => 
   });
 
 
-/* ------------------------------------Render homepage cards------------------------------------------------*/
+/* ------------------------------------Render all cards on homepage------------------------------------------------*/
 function renderHome(allCards) {
     cardsContainer.innerHTML = ''
   
@@ -81,11 +81,10 @@ function renderHome(allCards) {
       })  
   }
 
-
-/* ------------------------------------Render bookmark cards----------------------------------------------- */
-  function renderFavorites(bookmarkedCards) {
+/* ------------------------------------Render bookmarked cards----------------------------------------------- */
+  function renderFavorites(bookmarkedCards, allCards) {
     favoritesContainer.innerHTML = ''
-  
+    console.log(allCards);
     bookmarkedCards
       //.filter(card => card.tags.includes(currentFilter) || currentFilter === 'all')
       .forEach((bookmarkedCard) => {
@@ -95,7 +94,7 @@ function renderHome(allCards) {
         <section class="characterCard" data-js="epicFighterCard">
         <img src="${bookmarkedCard.image}" />
     
-        <button class="bookmarkBtn" data-js="bookmark">Click me</button>
+        <button class="bookmarkBtn card__bookmark--active" data-js="bookmark">Click me</button>
     
         <label class="nameLabel">${bookmarkedCard.name}</label>
     
@@ -107,7 +106,22 @@ function renderHome(allCards) {
       </section>
         `
         favoritesContainer.append(cardElement)
+        
+        const bookmarkElement = cardElement.querySelector('[data-js="bookmark"]')
+        bookmarkElement.addEventListener('click', () => {
+          bookmarkElement.classList.toggle('card__bookmark--active')
+          //changeIsBookmarked(bookmarkedCard)
           
+          allCards = allCards.map((allCard => {
+            if (allCard.id === bookmarkedCard.id){
+              return {...allCard, isBookmarked: !allCard.isBookmarked};
+            }else {
+              return allCard;
+            }
+            console.log(allCard.isBookmarked)
+          }))
+          
+        })
       })  
       
   }
