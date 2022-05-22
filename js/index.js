@@ -40,13 +40,13 @@ form.addEventListener('submit', (event) => {
   const speciesElement = form.elements.species
   const locationElement = form.elements.location
   console.log(locationElement)
-  const imageElement = URL.createObjectURL(imageInput.files[0]);
+  const imageElement = URL.createObjectURL(imageInput.files[0])
 
   const newCard = {
     name: fighterNameElement.value,
     status: statusElement.value,
     species: speciesElement.value,
-    location: {name: locationElement.value},
+    location: { name: locationElement.value },
     image: imageElement,
     isBookmarked: false,
   }
@@ -164,7 +164,7 @@ function renderFavorites(bookmarkedCards) {
             return allCard
           }
         })
-        cardElement.remove();
+        cardElement.remove()
       })
     })
 }

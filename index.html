@@ -24,50 +24,63 @@
     </header>
     <main>
       <!-------------------------- HOME ---------------------------->
-      <ul role="list" class="card-list" data-js="cards">
-        <li>hello</li>
-      </ul>
+      <ul role="list" class="card-list" data-js="cards"></ul>
       <!-------------------------- FAVORITES ---------------------------->
       <section class="cards-container hidden" data-js="favoriteCards"></section>
       <!-------------------------- CREATE ---------------------------->
       <section class="createPage hidden" data-js="createCards">
         <form action="" data-js="form" method="post">
-          <label for="name-input">Name:</label>
+          <label class="form__label" for="name-input">Name:</label>
           <textarea
             name="name"
             id="name"
             cols="30"
             rows="1"
             placeholder="Pickle Rick"
-            required></textarea>
-          <label for="dead-or-alive">Status:</label>
-            <select name="status" id="status" required>
-              <option value="Dead">Dead</option>
-              <option value="Alive">Alive</option>
-              <option value="Soon to be Dead">Soon to be Dead</option>
-              <option value="Something in between">Something in between</option>
-            </select>
-          <label class="form__label" for="species">Species:</label>
+            required
+          ></textarea>
+          <label class="form__label" for="dead-or-alive">Status:</label>
+          <textarea
+            name="status"
+            id="status"
+            cols="30"
+            rows="1"
+            placeholder="Semi-Dead"
+          ></textarea>
+
+          <label class="form__label" class="form__label" for="species"
+            >Species:</label
+          >
           <textarea
             name="species"
             id="species"
             cols="30"
             rows="1"
             placeholder="Cucumber"
-            required></textarea>
+            required
+          ></textarea>
 
-          <label class="form__label" for="location">Last known Location:</label>
+          <label class="form__label" class="form__label" for="location"
+            >Last known Location:</label
+          >
           <textarea
             name="location"
             id="location"
             cols="30"
             rows="1"
             placeholder="Sewers"
-            required></textarea>
+            required
+          ></textarea>
 
-          <input type="file" data-js="img" id="image" class="image-upload" accept="image/*">
+          <input
+            type="file"
+            data-js="img"
+            id="image"
+            class="image-upload"
+            accept="image/*"
+          />
 
-          <input class="createCard" type="submit">Join the fight!</input>
+          <button class="createCard" type="submit">Join the fight!</button>
         </form>
       </section>
     </main>
