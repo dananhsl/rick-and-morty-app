@@ -19,8 +19,18 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  animation: glow 1s ease-in-out infinite alternate;
   z-index: -1;
-  text-shadow: 0 0 7px var(--lightgreen), 0 0 10px var(--picklegreen),
-    0 0 21px var(--lightgreen);
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px var(--lightgreen), 0 0 20px var(--lightgreen),
+      0 0 30px var(--picklegreen), 0 0 40px var(--picklegreen),
+      0 0 10px var(--picklegreen);
+  }
+  to {
+    text-shadow: 0 0 7px var(--lightgreen), 0 0 10px var(--picklegreen),
+      0 0 21px var(--lightgreen);
+  }
 }
